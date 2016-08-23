@@ -9,6 +9,12 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
-
+.controller('View1Ctrl', ['$scope',function($scope) {
+  $scope.images = [
+    {'name':"snow field", 'image':'/images/snow-field.JPG'},
+    {'name':"snow mountain", 'image':'/images/snow-mnt.jpeg'},
+    {'name': "snow lake", 'image':'/images/snow-lake.jpeg'},
+    {'name': "snow house", 'image': '/images/snow-house.jpeg'}
+  ];
+  $scope.selectedImg = {'src':$scope.images[0].image};
 }]);
